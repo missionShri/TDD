@@ -51,7 +51,6 @@ public class StringCalculator {
                 {
                     delimiterBuilder.append("|");
                 }
-                //i++;
             }
             inputs = delimiterAndInputString[1].split(delimiterBuilder.toString());*/
 

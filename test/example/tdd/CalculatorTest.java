@@ -112,8 +112,14 @@ public class CalculatorTest {
     }
 
 //    @Test
-//    public final void whenMultipleVariableLengthDelimitersThenTheirSumIsReturned()
+//    public final void whenMultipleSingleCharDelimitersThenTheirSumIsReturned()
 //    {
 //        Assert.assertEquals(3+6+15, StringCalculator.add("//[+][;]\n3;6+15"));
+//    }
+//
+//    @Test
+//    public final void whenMultipleVariableLengthDelimitersThenTheirSumIsReturned()
+//    {
+//        Assert.assertEquals(3+6+15, StringCalculator.add("//[--][;]\n3;6--15"));
 //    }
 }
