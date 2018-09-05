@@ -1,6 +1,5 @@
-package example.tdd.tests;
+package example.tdd;
 
-import example.tdd.src.StringCalculator;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
@@ -80,16 +79,10 @@ public class CalculatorTest {
     }
 
     @Test
-    public final void whenDelimitersWithVariableLengthThenTheirSumIsReturned()
+    public final void whenCustomSameDelimitersThenTheirSumIsReturned()
     {
         Assert.assertEquals(3+6+15, StringCalculator.add("//;;;\n3;;;6;;;15"));
     }
-
-    //    @Test
-    //    public final void whenMultipleDelimitersWithVariableLengthThenTheirSumIsReturned()
-    //    {
-    //        Assert.assertEquals(3+6+15, StringCalculator.add("//+;\n3;6+15"));
-    //    }
 
     @Rule
     public ExpectedException expectedEx = ExpectedException.none();
@@ -117,4 +110,10 @@ public class CalculatorTest {
     {
         Assert.assertEquals(3+6+1000+18+33, StringCalculator.add("3,6,1000, 1500,18,4600,33"));
     }
+
+//    @Test
+//    public final void whenMultipleVariableLengthDelimitersThenTheirSumIsReturned()
+//    {
+//        Assert.assertEquals(3+6+15, StringCalculator.add("//[+][;]\n3;6+15"));
+//    }
 }

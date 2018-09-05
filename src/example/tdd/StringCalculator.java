@@ -1,5 +1,6 @@
-package example.tdd.src;
+package example.tdd;
 
+import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
@@ -25,6 +26,35 @@ public class StringCalculator {
             final String delimiter = delimiterAndInputString[0]
                 .substring(delimiterAndInputString[0].indexOf(DELIMITER_PREFIX) + (DELIMITER_PREFIX.length()));
             inputs = delimiterAndInputString[1].split(delimiter);
+
+            /*final String[] delimiterAndInputString = userInput.split("\n", 2);
+            final String delimiterString = delimiterAndInputString[0]
+                .substring(delimiterAndInputString[0].indexOf(DELIMITER_PREFIX) + (DELIMITER_PREFIX.length()));
+            final String[] delimitersWithStartEnd = delimiterString.split("\\[");
+
+            StringBuilder delimiterBuilder = new StringBuilder();
+
+            String delimiterWithEnd = null;
+            for (int i =1 ;i<delimitersWithStartEnd.length;i++)
+            {
+                delimiterWithEnd =  delimitersWithStartEnd[i] ;
+                if(delimiterWithEnd.endsWith("]"))
+                {
+                    delimiterBuilder.append("\\"+delimiterWithEnd.substring(0,delimiterWithEnd.length()-1));
+                }
+                else
+                {
+                    delimiterBuilder.append("\\"+delimiterWithEnd);
+                }
+
+                if(i<delimitersWithStartEnd.length-1)
+                {
+                    delimiterBuilder.append("|");
+                }
+                //i++;
+            }
+            inputs = delimiterAndInputString[1].split(delimiterBuilder.toString());*/
+
         } else
         {
             //TODO : Cool trick for regex-s
